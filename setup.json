@@ -1,6 +1,6 @@
 {
-    "tele_api_id" : "13919847",
-    "tele_api_hash" : "4b98cbc6bdfb436b8ab9a2ebf33de24a",
+    "tele_api_id" : "",
+    "tele_api_hash" : "",
     "send_on_start" : true,
     "dm_message" : {
         "enabled" : false,
