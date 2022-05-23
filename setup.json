@@ -1,0 +1,47 @@
+{
+    "tele_api_id" : "13919847",
+    "tele_api_hash" : "4b98cbc6bdfb436b8ab9a2ebf33de24a",
+    "send_on_start" : true,
+    "dm_message" : {
+        "enabled" : false,
+        "message" : "Hello I'll be there with you shortly"
+    },
+    "setup" : 
+    [
+        {
+            "forward" : true,
+            "from_channel" : -1001670622377,
+            "to_channel" : -1001597356953,
+            "message_id" : 43067,
+            "wait_time" : 2
+        },
+        {
+            "forward" : true,
+            "from_channel" : -1001670622377,
+            "to_channel" : -1001607763877,
+            "message_id" : 43067,
+            "wait_time" : 2
+        },
+        {
+            "forward" : true,
+            "from_channel" : -1001670622377,
+            "to_channel" : -1001746073826,
+            "message_id" : 43067,
+            "wait_time" : 2
+        },
+        {
+            "forward" : true,
+            "from_channel" : -1001670622377,
+            "to_channel" : -1001757231572,
+            "message_id" : 43067,
+            "wait_time" : 2
+        },
+        {
+            "forward" : true,
+            "from_channel" : -1001670622377,
+            "to_channel" : -1001670622377,
+            "message_id" : 43067,
+            "wait_time" : 2
+        }
+    ]
+}
