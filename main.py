@@ -1,6 +1,7 @@
 import json
 import asyncio
 from pyrogram import Client, filters
+data = json.loads(open('setup.json', encoding='utf8').read())
 
 async def main(api_id, api_hash, json):
     async with Client('Telegram', api_id, api_hash) as app:
@@ -24,25 +25,25 @@ async def main(api_id, api_hash, json):
                     except:
                         pass
         i = 0
-        while(True):
-            await asyncio.sleep(60)
+        while True:
+            await asyncio.sleep(120)
             i = i + 1
             for item in json['setup']:
                 if i % item['wait_time'] == 0:
                     if item['forward']:
-                        print(f"Forwarding Message | {item['forward_to']} | {item['forward_from']} | {item['message_id']}")
+                        print(f"Forwarding Message | {item['to_channel']} | {item['from_channel']} | {item['message_id']}")
                         try:
-                            await app.forward_messages(item['forward_to'], item['forward_from'], item['message_id'])
+                            await app.forward_messages(item['to_channel'], item['from_channel'], item['message_id'])
                         except:
                             pass
                     else:
                         print(f"Sending Message | {item['to_channel']}")
                         try:
-                            await app.send_message(item['to_channel'], item['message'])
+                            await app.send_message(item['to_channel'], item['message_id'])
                         except:
                             pass
+            print(f"round {i} completed")
 
-data = json.loads(open('setup.json', encoding='utf8').read())
 
 print("Starting")
 asyncio.run(main(data['tele_api_id'], data['tele_api_hash'], data))
